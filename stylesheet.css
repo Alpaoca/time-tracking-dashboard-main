@@ -1,0 +1,135 @@
+.p {
+  margin: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  background-color: hsl(226, 43%, 10%);
+  font-family: rubik;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1em;
+  color: white;
+}
+.dashboard__profile {
+  position: relative;
+  display: inline-block;
+  grid-area: 1/1/3/2;
+  background: hsl(235, 46%, 20%);
+  border-radius: 8px;
+}
+.dashboard__profile img {
+  height: 3em;
+  border: 2px solid white;
+  border-radius: 5rem;
+}
+.dashboard__profilebanner {
+  height: 15em;
+  border-radius: 10px;
+  background-color: hsl(246, 80%, 60%);
+  padding: 0.5rem 1.5rem;
+}
+.dashboard__work {
+  position: relative;
+  display: inline-block;
+  grid-area: 1/2/2/3;
+}
+.dashboard__workbanner {
+  border-radius: 10px;
+  background-color: hsl(15, 100%, 70%);
+  padding-top: 2rem;
+  background-image: url("./images/icon-work.svg");
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: -5%;
+  background-size: 3rem;
+}
+.dashboard__play {
+  position: relative;
+  display: inline-block;
+  grid-area: 1/3/2/4;
+}
+.dashboard__playbanner {
+  border-radius: 10px;
+  background-color: hsl(195, 74%, 62%);
+  padding-top: 2rem;
+  background-image: url("./images/icon-play.svg");
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: -5%;
+  background-size: 3rem;
+}
+.dashboard__study {
+  position: relative;
+  display: inline-block;
+  grid-area: 1/4/2/5;
+}
+.dashboard__studybanner {
+  border-radius: 10px;
+  background: hsl(348, 100%, 68%);
+  padding-top: 2rem;
+  background-image: url("./images/icon-study.svg");
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: -5%;
+  background-size: 3rem;
+}
+.dashboard__exercisebanner {
+  border-radius: 10px;
+  background: hsl(145, 58%, 55%);
+  padding-top: 2rem;
+  background-image: url("./images/icon-exercise.svg");
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: -5%;
+  background-size: 3rem;
+}
+.dashboard__socialbanner {
+  border-radius: 10px;
+  background: hsl(264, 64%, 52%);
+  padding-top: 2rem;
+  background-image: url("./images/icon-social.svg");
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: -5%;
+  background-size: 3rem;
+}
+.dashboard__selfcarebanner {
+  border-radius: 10px;
+  background: hsl(43, 84%, 65%);
+  padding-top: 2rem;
+  background-image: url("./images/icon-self-care.svg");
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: -5%;
+  background-size: 3rem;
+}
+.dashboard__description {
+  background: hsl(235, 46%, 20%);
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+}
+.dashboard__description--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}/*# sourceMappingURL=stylesheet.css.map */
