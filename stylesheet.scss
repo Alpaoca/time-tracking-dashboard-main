@@ -10,8 +10,20 @@ $Softyellow: hsl(43, 84%, 65%); //self care
 
 $Verydarkblue: hsl(226, 43%, 10%);
 $Darkblue: hsl(235, 46%, 20%);
-$Desaturatedblue: hsl(235, 45%, 61%);
+$Desaturatedblue: hsl(236, 78%, 82%);
 $PaleBlue: hsl(236, 100%, 87%);
+$PalerBlue: hsl(236, 41%, 34%);
+
+@mixin banner-list {
+  border-radius: 10px;
+  padding-top: 2rem;
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: -5%;
+  background-size: 3rem;
+  height: 100%;
+  box-sizing: border-box;
+}
 
 .p {
   margin: 0;
@@ -33,7 +45,11 @@ main {
   align-items: center;
   height: 100vh;
 }
-
+h1 {
+  font-weight: 300;
+  font-size: 2rem;
+  margin: 0;
+}
 .dashboard {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -48,104 +64,238 @@ main {
     background: $Darkblue;
     border-radius: 8px;
     img {
-      height: 3em;
+      height: 4rem;
       border: 2px solid white;
       border-radius: 5rem;
     }
   }
   &__profilebanner {
-    height: 15em;
+    height: 16rem;
+    width: 13rem;
     border-radius: 10px;
     background-color: $Blue;
+    padding: 1.5rem;
+    box-sizing: border-box;
+  }
+  &__profilename {
+    margin: 1em 0 2em;
+  }
+
+  &__profiledescription {
     padding: 0.5rem 1.5rem;
   }
   &__work {
-    position: relative;
-    display: inline-block;
-    grid-area: 1 / 2/ 2/ 3;
   }
   &__workbanner {
-    border-radius: 10px;
     background-color: $Lightorange;
-    padding-top: 2rem;
     background-image: url("./images/icon-work.svg");
-    background-repeat: no-repeat;
-    background-position-x: 90%;
-    background-position-y: -5%;
-    background-size: 3rem;
+    @include banner-list;
   }
   &__play {
-    position: relative;
-    display: inline-block;
-    grid-area: 1 / 3/ 2/ 4;
   }
   &__playbanner {
-    border-radius: 10px;
     background-color: $Softblue;
-    padding-top: 2rem;
     background-image: url("./images/icon-play.svg");
-    background-repeat: no-repeat;
-    background-position-x: 90%;
-    background-position-y: -5%;
-    background-size: 3rem;
+    @include banner-list;
   }
   &__study {
-    position: relative;
-    display: inline-block;
-    grid-area: 1 / 4/ 2/ 5;
   }
   &__studybanner {
-    border-radius: 10px;
     background: $Lightred;
-    padding-top: 2rem;
     background-image: url("./images/icon-study.svg");
-    background-repeat: no-repeat;
-    background-position-x: 90%;
-    background-position-y: -5%;
-    background-size: 3rem;
+    @include banner-list;
+  }
+  &__exercise {
   }
   &__exercisebanner {
-    border-radius: 10px;
     background: $Limegreen;
-    padding-top: 2rem;
     background-image: url("./images/icon-exercise.svg");
-    background-repeat: no-repeat;
-    background-position-x: 90%;
-    background-position-y: -5%;
-    background-size: 3rem;
+    @include banner-list;
+    background-position-y: 0%;
+  }
+  &__social {
   }
   &__socialbanner {
-    border-radius: 10px;
     background: $Violet;
-    padding-top: 2rem;
     background-image: url("./images/icon-social.svg");
-    background-repeat: no-repeat;
-    background-position-x: 90%;
-    background-position-y: -5%;
-    background-size: 3rem;
+    @include banner-list;
+  }
+  &__selfcare {
   }
   &__selfcarebanner {
-    border-radius: 10px;
     background: $Softyellow;
-    padding-top: 2rem;
     background-image: url("./images/icon-self-care.svg");
-    background-repeat: no-repeat;
-    background-position-x: 90%;
-    background-position-y: -5%;
-    background-size: 3rem;
+    @include banner-list;
+  }
+  &__time {
+    font-weight: 300;
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  &__smallfont {
+    font-weight: 300;
+    font-size: 0.7rem;
+    margin: 1em 0;
+    color: $Desaturatedblue;
+  }
+  &__mediumfont {
+    font-weight: 300;
+    font-size: 1rem;
+    color: $Desaturatedblue;
+  }
+  &__mediumfont:hover {
+    color: white;
+    cursor: pointer;
   }
   &__description {
     background: $Darkblue;
     border-radius: 8px;
-    padding: 0.5rem 1.5rem;
-    // display: flex;
-    // flex-direction: column;
-    // gap: .5rem;
-
+    padding: 1rem;
+    height: 100%;
+    box-sizing: border-box;
     &--header {
+      p {
+        margin: 0;
+      }
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+    &--time {
+      padding: 1em 0 0 0;
+    }
+  }
+  &__description:hover {
+    background-color: $PalerBlue;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  @mixin banner-list {
+    border-radius: 10px;
+    padding-top: 3rem;
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: -5%;
+    background-size: 4rem;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  main {
+    height: auto;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .dashboard {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(7, 0.5fr);
+
+    &__profile {
+      position: relative;
+      display: inline-block;
+      grid-area: 1 / 1/ 2/ 2;
+      border-radius: 8px;
+      img {
+        height: 4rem;
+        border: 2px solid white;
+        border-radius: 5rem;
+      }
+    }
+    &__profilebanner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      width: auto;
+      padding: 1.5rem;
+      box-sizing: border-box;
+    }
+    &__profilename {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 1em;
+    }
+
+    &__profiledescription {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__work {
+    }
+    &__workbanner {
+      background-color: $Lightorange;
+      background-image: url("./images/icon-work.svg");
+      @include banner-list;
+    }
+    &__play {
+    }
+    &__playbanner {
+      background-color: $Softblue;
+      background-image: url("./images/icon-play.svg");
+      @include banner-list;
+    }
+    &__study {
+    }
+    &__studybanner {
+      background: $Lightred;
+      background-image: url("./images/icon-study.svg");
+      @include banner-list;
+    }
+    &__exercise {
+    }
+    &__exercisebanner {
+      background: $Limegreen;
+      background-image: url("./images/icon-exercise.svg");
+      @include banner-list;
+      background-position-y: 0%;
+    }
+    &__social {
+    }
+    &__socialbanner {
+      background: $Violet;
+      background-image: url("./images/icon-social.svg");
+      @include banner-list;
+    }
+    &__selfcare {
+    }
+    &__selfcarebanner {
+      background: $Softyellow;
+      background-image: url("./images/icon-self-care.svg");
+      @include banner-list;
+    }
+    &__time {
+      font-weight: 300;
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    &__smallfont {
+      font-weight: 300;
+      font-size: 0.9rem;
+      margin: 1em 0;
+      color: $Desaturatedblue;
+    }
+    &__mediumfont {
+      font-weight: 300;
+      font-size: 1rem;
+      color: $Desaturatedblue;
+    }
+    &__mediumfont:hover {
+    }
+    &__description {
+      &--time {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 0.5em 0;
+      }
+    }
+    &__description:hover {
     }
   }
 }
