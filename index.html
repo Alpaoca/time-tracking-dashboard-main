@@ -18,6 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
+    <script src="./myscript.js" defer type="module"></script>
     <title>Frontend Mentor | Time tracking dashboard</title>
   </head>
   <body>
@@ -26,15 +27,15 @@
         <div class="dashboard__profile">
           <div class="dashboard__profilebanner">
             <img src="./images/image-jeremy.png" />
-              <div class="dashboard__profilename">
-                <p class="dashboard__smallfont" style="margin: 0">Report for</p>
-                <h1>Jeremy Robson</h1>
-              </div>
+            <div class="dashboard__profilename">
+              <p class="dashboard__smallfont" style="margin: 0">Report for</p>
+              <h1>Jeremy Robson</h1>
+            </div>
           </div>
           <div class="dashboard__profiledescription">
-            <p class="dashboard__mediumfont">Daily</p>
-            <p class="dashboard__mediumfont">Weekly</p>
-            <p class="dashboard__mediumfont">Monthly</p>
+            <p class="dashboard__mediumfont daily">Daily</p>
+            <p class="dashboard__mediumfont weekly">Weekly</p>
+            <p class="dashboard__mediumfont monthly">Monthly</p>
           </div>
         </div>
         <div class="dashboard__work">
@@ -48,8 +49,8 @@
                 />
               </div>
               <div class="dashboard__description--time">
-                <p class="dashboard__time">32hrs</p>
-                <p class="dashboard__smallfont">Last Week - 36hrs</p>
+                <p class="dashboard__time workcurrent">32hrs</p>
+                <p class="dashboard__smallfont workprevious">Last Week - 36hrs</p>
               </div>
             </div>
           </div>
@@ -65,8 +66,8 @@
                 />
               </div>
               <div class="dashboard__description--time">
-                <p class="dashboard__time">10hrs</p>
-                <p class="dashboard__smallfont">Last Week - 8hrs</p>
+                <p class="dashboard__time playcurrent">10hrs</p>
+                <p class="dashboard__smallfont playprevious">Last Week - 8hrs</p>
               </div>
             </div>
           </div>
@@ -82,8 +83,8 @@
                 />
               </div>
               <div class="dashboard__description--time">
-                <p class="dashboard__time">4hrs</p>
-                <p class="dashboard__smallfont">Last Week - 7hrs</p>
+                <p class="dashboard__time studycurrent">4hrs</p>
+                <p class="dashboard__smallfont studyprevious">Last Week - 7hrs</p>
               </div>
             </div>
           </div>
@@ -99,8 +100,8 @@
                 />
               </div>
               <div class="dashboard__description--time">
-                <p class="dashboard__time">4hrs</p>
-                <p class="dashboard__smallfont">Last Week - 5hrs</p>
+                <p class="dashboard__time exercisecurrent">4hrs</p>
+                <p class="dashboard__smallfont exerciseprevious">Last Week - 5hrs</p>
               </div>
             </div>
           </div>
@@ -109,15 +110,15 @@
           <div class="dashboard__socialbanner">
             <div class="dashboard__description">
               <div class="dashboard__description--header">
-                <p>social</p>
+                <p>Social</p>
                 <img
                   src="./images/icon-ellipsis.svg"
                   class="dashboard__ellipsis"
                 />
               </div>
               <div class="dashboard__description--time">
-                <p class="dashboard__time">5hrs</p>
-                <p class="dashboard__smallfont">Last Week - 10hrs</p>
+                <p class="dashboard__time socialcurrent">5hrs</p>
+                <p class="dashboard__smallfont socialprevious">Last Week - 10hrs</p>
               </div>
             </div>
           </div>
@@ -133,8 +134,8 @@
                 />
               </div>
               <div class="dashboard__description--time">
-                <p class="dashboard__time">2hrs</p>
-                <p class="dashboard__smallfont">Last Week - 2hrs</p>
+                <p class="dashboard__time selfcarecurrent">2hrs</p>
+                <p class="dashboard__smallfont selfcareprevious">Last Week - 2hrs</p>
               </div>
             </div>
           </div>
