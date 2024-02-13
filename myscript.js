@@ -1,18 +1,17 @@
 import data from "./data.json" assert { type: "json" };
-console.log(data[0].timeframes.daily.previous);
 
 var daily = document.querySelector(".daily");
 var weekly = document.querySelector(".weekly");
 var monthly = document.querySelector(".monthly");
 
 function clearActive() {
-  [daily, weekly, monthly].forEach((element) => {
-    element.className.replace('active', '')
-  });
+  daily.classList.remove("active");
+  weekly.classList.remove("active");
+  monthly.classList.remove("active");
 }
 
 function setActive(element) {
-  element.setAttribute('class', element.className + " active");
+  element.setAttribute("class", element.className + " active");
 }
 
 daily.addEventListener("click", (e) => {
@@ -20,10 +19,14 @@ daily.addEventListener("click", (e) => {
   setActive(e.target);
   changeColor("daily");
 });
-weekly.addEventListener("click", () => {
+weekly.addEventListener("click", (e) => {
+  clearActive();
+  setActive(e.target);
   changeColor("weekly");
 });
-monthly.addEventListener("click", () => {
+monthly.addEventListener("click", (e) => {
+  clearActive();
+  setActive(e.target);
   changeColor("monthly");
 });
 

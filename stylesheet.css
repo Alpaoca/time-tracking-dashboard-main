@@ -178,6 +178,10 @@ h1 {
   cursor: pointer;
 }
 
+.active {
+  color: white;
+}
+
 @media screen and (max-width: 900px) {
   main {
     height: auto;
