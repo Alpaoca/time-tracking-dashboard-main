@@ -60,6 +60,8 @@ h1 {
   margin: 1em 0 2em;
 }
 .dashboard__profiledescription {
+  font-weight: 300;
+  color: hsl(236, 78%, 82%);
   padding: 0.5rem 1.5rem;
 }
 .dashboard__workbanner {
@@ -140,21 +142,6 @@ h1 {
   font-size: 2.5rem;
   margin: 0;
 }
-.dashboard__smallfont {
-  font-weight: 300;
-  font-size: 0.7rem;
-  margin: 1em 0;
-  color: hsl(236, 78%, 82%);
-}
-.dashboard__mediumfont {
-  font-weight: 300;
-  font-size: 1rem;
-  color: hsl(236, 78%, 82%);
-}
-.dashboard__mediumfont:hover {
-  color: white;
-  cursor: pointer;
-}
 .dashboard__description {
   background: hsl(235, 46%, 20%);
   border-radius: 8px;
@@ -177,9 +164,24 @@ h1 {
   background-color: hsl(236, 41%, 34%);
   cursor: pointer;
 }
+.dashboard__previous {
+  color: hsl(236, 78%, 82%);
+}
 
 .active {
   color: white;
+}
+
+.font--small {
+  font-size: 0.7rem;
+  margin: 1em 0;
+}
+.font--medium {
+  font-size: 1rem;
+}
+.font--medium:hover {
+  color: white;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 900px) {
@@ -302,22 +304,22 @@ h1 {
     font-size: 2.5rem;
     margin: 0;
   }
-  .dashboard__smallfont {
-    font-weight: 300;
-    font-size: 0.9rem;
-    margin: 1em 0;
-    color: hsl(236, 78%, 82%);
-  }
-  .dashboard__mediumfont {
-    font-weight: 300;
-    font-size: 1rem;
-    color: hsl(236, 78%, 82%);
-  }
   .dashboard__description--time {
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
     padding: 0.5em 0;
+  }
+  .font--small {
+    font-size: 0.9rem;
+    margin: 1em 0;
+  }
+  .font--medium {
+    font-size: 1rem;
+  }
+  .font--medium:hover {
+    color: white;
+    cursor: pointer;
   }
 }/*# sourceMappingURL=stylesheet.css.map */
